@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutoro - Learn from the Best</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-left">
+                <span class="navbar-brand">Tutoro</span>
+            </div>
+            <button class="hamburger" id="hamburger-btn">
+                         &#9776;
+            </button>
+
+            <div class="navbar-right"  id="navbar-menu">
+                <a href="#course-section" class="navbar-link allcourses hidden">All Courses</a>
+                <button class=" hidden" id="buyedcourses">Purchased Courses</button>
+                <button class="navbar-login-btn " >Login</button>
+                <button class="navbar-logout-btn hidden "  >Logout</button>
+
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Authentication Page -->
+    <div id="auth-page" class="auth-page ">
+        <div class="auth-container "> 
+            <div class="auth-card">
+               
+                <!-- Signup Form -->
+                <form id="signup-form" class="auth-form">
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="signup-name" placeholder="Enter your full name" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <div class="input-wrapper">
+                            <input type="email" id="signup-email" placeholder="Enter your email" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Password</label>
+                        <div class="input-wrapper">
+                            <input type="password" id="signup-password" placeholder="Create a password" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                         <label>Signup as</label>
+                        <select name="role" class="options-signup">
+                        <option value="users">User</option>
+                        <option value="admin">Admin</option>
+                        </select>
+                    </div>
+                      
+
+                    <button type="submit" class="auth-btn signupbtn" >Create Account</button>
+                    
+                </form>
+                
+
+                <!-- Login Form -->
+                <form id="login-form" class="auth-form hidden">
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <div class="input-wrapper">
+                            <input type="email" id="login-email" placeholder="Enter your email" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Password</label>
+                        <div class="input-wrapper">
+                            
+                            <input type="password" id="login-password" placeholder="Enter your password" required>
+                           
+                        </div>
+                    </div>
+                    <div class="input-group">
+                         <label>Login as as</label>
+                        <select name="role" class="options-login">
+                        <option value="users">User</option>
+                        <option value="admin">Admin</option>
+                        </select>
+                    </div>
+                    <div class="input-group admin-password hidden">
+                        <label>Admin Password</label>
+                        <div class="input-wrapper">
+                            
+                            <input type="password"  id="Admin-password" placeholder="Enter the admin password">
+                           
+                        </div>
+                    </div>
+
+                    
+
+                    <button type="submit" class="auth-btn loginbtn" >Login</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Add Course dashboard for admin -->
+     <!-- Admin Dashboard -->
+<div id="admin-dashboard" class="hidden">
+    <div class="container">
+        <h2>Welcome Admin</h2>
+        <button id="show-add-form" class="auth-btn">+ Add Course</button>
+
+        <!-- Add Course Form -->
+        <form id="admin-add-course-form" class="auth-form hidden">
+            <div class="input-group">
+                <label>Title</label>
+                <input type="text" id="admin-course-title" required>
+            </div>
+            <div class="input-group">
+                <label>Description</label>
+                <input type="text" id="admin-course-description" required>
+            </div>
+            <div class="input-group">
+                <label>Image URL (optional)</label>
+                <input type="text" id="admin-course-image">
+            </div>
+            <div class="input-group">
+                <label>Price</label>
+                <input type="number" id="admin-course-price" required>
+            </div>
+            <button type="submit" class="auth-btn">Submit</button>
+        </form>
+
+        <!-- Course List -->
+        <div id="admin-course-list" class="course-grid" style="margin-top: 40px;">
+            
+        </div>
+    </div>
+</div>
+
+<!-- buyed courses  section-->
+<div id="buyed-courses" class="hidden">
+        <div class="container">
+            <div class="buyed-courses-navbar">
+                <h2>Purchased courses</h2>
+                <button id="back-to-main" class="back-button"> Back</button> 
+            </div>
+            <div class="course-grid" id="buyedcourses-course-grid">
+              <!-- Buyed Courses will be loaded dynamically -->
+            </div>
+            
+        </div>
+</div>
+
+
+
+        <!-- Main Website -->
+    <div id="main-website" class="main-website hidden ">
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Learn from the <span class="gradient-text">Best</span></h1>
+                        <p>Master new skills with our premium courses taught by industry experts. Join millions of learners worldwide and advance your career today.</p>   
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Courses -->
+        <section class="courses"  id="course-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Courses</h2>
+                    <p>Discover our most popular and highly-rated courses</p>
+                </div>
+
+                <div class="course-grid" id="course-grid">
+                   
+
+                    <!-- Courses will be loaded dynamically -->
+                </div>
+
+                
+            </div>
+        </section>
+   
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <i class="fas fa-book-open"></i>
+                            <span>Tutoro</span>
+                        </div>
+                        <p>Transform your career with world-class online courses from industry experts.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Courses</h3>
+                        <ul>
+                            <li><a href="#">Web Development</a></li>
+                            <li><a href="#">Data Science</a></li>
+                            <li><a href="#">Mobile Development</a></li>
+                            <li><a href="#">UI/UX Design</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Community</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Tutoro. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
