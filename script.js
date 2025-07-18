@@ -1,6 +1,6 @@
 
 
-const API_URL='http://localhost:3001/';
+const API_URL='https://tutoro-backend.onrender.com/';
 
 const authpage=document.querySelector("#auth-page");
 const signupform =document.getElementById("signup-form");
